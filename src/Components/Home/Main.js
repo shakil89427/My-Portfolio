@@ -1,7 +1,9 @@
 import React from "react";
-import Banner from "./Header/Banner";
 import Header from "./Header/Header";
-import Mainwork from "./Header/Mainwork";
+import Banner from "./Banner/Banner";
+import Mainwork from "./MainWork/Mainwork";
+import Experiences from "./Experiences/Experiences";
+import Recent from "./Recent/Recent";
 
 const Main = () => {
   return (
@@ -9,6 +11,8 @@ const Main = () => {
       <Header></Header>
       <Banner></Banner>
       <Mainwork></Mainwork>
+      <Experiences></Experiences>
+      <Recent></Recent>
     </div>
   );
 };
