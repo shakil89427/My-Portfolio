@@ -30,7 +30,7 @@ const Recent = () => {
           </a>
         </Col>
       </Row>
-      <Row className="d-flex flex-sm-column-reverse flex-md-row flex-lg-row my-5">
+      <Row className="d-flex flex-column-reverse flex-md-row flex-lg-row  my-5">
         <Col className=" text-center p-5" md={6} lg={6}>
           <h2 className="fw-light">Small Apps</h2>
           <h5 className="fw-light">
