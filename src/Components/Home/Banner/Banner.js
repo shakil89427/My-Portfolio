@@ -14,6 +14,7 @@ const Banner = () => {
       <a
         className="down"
         href="https://drive.google.com/file/d/1rK0LtlgEpt2BsSndjo5Qvt_cpvahK8Hp/view?usp=sharing"
+        target="blank"
       >
         <button className="banner-btn">Get Resume</button>
       </a>
