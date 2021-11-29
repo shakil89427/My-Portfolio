@@ -1,9 +1,12 @@
 import React from "react";
-import Header from "./Header/Header";
 import Banner from "./Banner/Banner";
 import Mainwork from "./MainWork/Mainwork";
 import Experiences from "./Experiences/Experiences";
 import Recent from "./Recent/Recent";
+import Contact from "./Contact/Contact";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Top from "../Footer/Top";
 
 const Main = () => {
   return (
@@ -13,6 +16,9 @@ const Main = () => {
       <Mainwork></Mainwork>
       <Experiences></Experiences>
       <Recent></Recent>
+      <Contact></Contact>
+      <Footer></Footer>
+      <Top></Top>
     </div>
   );
 };

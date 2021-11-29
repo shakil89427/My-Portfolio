@@ -15,8 +15,9 @@ import github from "../../../images/GitHub.png";
 
 const Experiences = () => {
   return (
-    <Container className="experiences mb-5">
-      <h1 className="text-center fw-light my-4">Experiences</h1>
+    <Container id="skills" className="experiences mb-5">
+      <h1 className="text-center fw-light mt-4">Skill's</h1>
+      <hr className="mx-auto" />
       <Row className="text-center">
         <Col xs={6} sm={6} md={3} lg={2}>
           <img className="mt-2 img-fluid" src={html} alt="" />
