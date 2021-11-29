@@ -30,8 +30,8 @@ const Recent = () => {
           </a>
         </Col>
       </Row>
-      <Row className="my-5">
-        <Col className="text-center p-5" sm={12} md={6} lg={6}>
+      <Row className="d-flex flex-sm-column-reverse flex-md-row flex-lg-row my-5">
+        <Col className=" text-center p-5" md={6} lg={6}>
           <h2 className="fw-light">Small Apps</h2>
           <h5 className="fw-light">
             Fully Responsive non functional frontend focused multiple page
@@ -47,7 +47,7 @@ const Recent = () => {
             <button className="p-button">Code Link</button>
           </a>
         </Col>
-        <Col className="main-col" sm={12} md={6} lg={6}>
+        <Col className="main-col" md={6} lg={6}>
           <img className="img-fluid" src={small} alt="" />
         </Col>
       </Row>
