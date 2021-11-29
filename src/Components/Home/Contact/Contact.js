@@ -61,6 +61,7 @@ const Contact = () => {
                 <Col className="mb-3" sm={12} md={6} lg={6}>
                   <input
                     name="first"
+                    required
                     className="contact-input"
                     placeholder="First Name"
                     type="text"
@@ -69,6 +70,7 @@ const Contact = () => {
                 <Col className="mb-3" sm={12} md={6} lg={6}>
                   <input
                     name="last"
+                    required
                     className="contact-input"
                     placeholder="Last Name"
                     type="text"
@@ -77,6 +79,7 @@ const Contact = () => {
                 <Col className="mb-3" sm={12} md={12} lg={12}>
                   <input
                     name="email"
+                    required
                     className="contact-input"
                     placeholder="Your Email"
                     type="email"
@@ -85,6 +88,7 @@ const Contact = () => {
                 <Col className="mb-3" sm={12} md={12} lg={12}>
                   <textarea
                     name="messages"
+                    required
                     className="contact-input"
                     placeholder="Message"
                     rows="5"
