@@ -1,7 +1,30 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_NAME,
+        process.env.REACT_APP_TEMPLATE,
+        e.target,
+        process.env.REACT_APP_UID
+      )
+      .then(
+        (result) => {
+          if (result) {
+            e.target.reset();
+            alert("Message Successfully Sended");
+          }
+        },
+        (error) => {
+          alert(error);
+        }
+      );
+  };
+
   return (
     <div id="contact" className="pb-5">
       <h1 className="text-center fw-light mt-5">Contact Me</h1>
@@ -33,10 +56,11 @@ const Contact = () => {
           </Col>
           <Col className="text-center p-5" sm={12} md={6} lg={6}>
             <h2 className="fw-light mb-3">Send Your Valuable Message</h2>
-            <form>
+            <form onSubmit={sendEmail}>
               <Row className="text-center">
                 <Col className="mb-3" sm={12} md={6} lg={6}>
                   <input
+                    name="first"
                     className="contact-input"
                     placeholder="First Name"
                     type="text"
@@ -44,6 +68,7 @@ const Contact = () => {
                 </Col>
                 <Col className="mb-3" sm={12} md={6} lg={6}>
                   <input
+                    name="last"
                     className="contact-input"
                     placeholder="Last Name"
                     type="text"
@@ -51,6 +76,7 @@ const Contact = () => {
                 </Col>
                 <Col className="mb-3" sm={12} md={12} lg={12}>
                   <input
+                    name="email"
                     className="contact-input"
                     placeholder="Your Email"
                     type="email"
@@ -58,16 +84,17 @@ const Contact = () => {
                 </Col>
                 <Col className="mb-3" sm={12} md={12} lg={12}>
                   <textarea
+                    name="messages"
                     className="contact-input"
                     placeholder="Message"
                     rows="5"
                   ></textarea>
                 </Col>
               </Row>
+              <button type="submit" className="p-button">
+                Submit<i className="ms-1 fas fa-location-arrow"></i>
+              </button>
             </form>
-            <button className="p-button">
-              Submit<i className="ms-1 fas fa-location-arrow"></i>
-            </button>
           </Col>
         </Row>
       </Container>
