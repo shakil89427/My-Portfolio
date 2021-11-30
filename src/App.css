@@ -72,6 +72,8 @@ hr {
 }
 .used button {
   border: none;
+  background-color: rgba(209, 199, 199, 0.219);
+  font-weight: 600;
   margin: 5px;
   pointer-events: none;
   border-radius: 5px;
@@ -93,7 +95,7 @@ hr {
   color: white;
 }
 .p-button:hover {
-  background-color: blue;
+  background-color: #0486dd;
 }
 .main-img {
   width: 100%;
@@ -111,17 +113,14 @@ hr {
   border-radius: 5px;
 }
 .contact-input:focus {
-  background-color: #6dc0f767;
-}
-.info {
-  margin: 5px auto;
+  background-color: #6dc0f721;
 }
 .info:hover {
-  color: blue;
+  color: #0486dd;
 }
 .top {
   position: fixed;
-  padding: 15px;
+  padding: 10px;
   background-color: #0099ff;
   color: white;
   border-radius: 50%;

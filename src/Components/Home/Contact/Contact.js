@@ -48,13 +48,15 @@ const Contact = () => {
               always happy to hear from you, however, you choose to contact me.
               Simply fill in the form or get in touch via the following options:
             </p>
-            <p className="info">
+            <span className="info">
               <i className="me-2 fas fa-envelope"></i>Email:
               shakilahmed89427@gmail.com
-            </p>
-            <p className="info">
+            </span>
+            <br />
+            <span className="info">
               <i className="me-2 fas fa-phone-alt"></i>Phone: +8801879089427
-            </p>
+            </span>
+            <br />
             <a href="https://github.com/shakil89427" target="blank">
               <button className="p-button">
                 <i className="me-2 fab fa-github"></i>GitHub
@@ -64,7 +66,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/shakil-ahmed-804ba0220"
               target="blank"
             >
-              <button className="p-button">
+              <button className="mt-3 p-button">
                 <i className="me-2 fab fa-linkedin"></i>Linkedin
               </button>
             </a>
