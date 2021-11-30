@@ -8,7 +8,8 @@ const Header = () => {
         <Navbar.Brand href="#home">
           <div className="d-flex align-items-center">
             <h1 className="my-auto d-inline text-white fw-bolder">
-              <i className="fab fa-angellist"></i>SH@KIL
+              <i className="fab fa-angellist"></i>
+              <em>𝓢𝓗𝓐𝓚𝓘𝓛</em>
             </h1>
             <button className="h-btn">
               <i className="circle fas fa-circle"></i> Online

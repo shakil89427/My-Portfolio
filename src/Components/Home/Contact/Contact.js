@@ -1,9 +1,16 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Container, Row, Spinner } from "react-bootstrap";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [send, setSend] = useState(true);
+  const [wait, setWait] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [status, setStatus] = useState(false);
+
   const sendEmail = (e) => {
+    setSend(false);
+    setWait(true);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -16,11 +23,14 @@ const Contact = () => {
         (result) => {
           if (result) {
             e.target.reset();
-            alert("Message Successfully Sended");
+            setWait(false);
+            setSuccess(true);
+            setStatus(true);
           }
         },
         (error) => {
-          alert(error);
+          setWait(false);
+          setSend(true);
         }
       );
   };
@@ -65,6 +75,7 @@ const Contact = () => {
               <Row className="text-center">
                 <Col className="mb-3" sm={12} md={6} lg={6}>
                   <input
+                    disabled={status}
                     name="first"
                     required
                     className="contact-input"
@@ -74,6 +85,7 @@ const Contact = () => {
                 </Col>
                 <Col className="mb-3" sm={12} md={6} lg={6}>
                   <input
+                    disabled={status}
                     name="last"
                     required
                     className="contact-input"
@@ -83,6 +95,7 @@ const Contact = () => {
                 </Col>
                 <Col className="mb-3" sm={12} md={12} lg={12}>
                   <input
+                    disabled={status}
                     name="email"
                     required
                     className="contact-input"
@@ -92,6 +105,7 @@ const Contact = () => {
                 </Col>
                 <Col className="mb-3" sm={12} md={12} lg={12}>
                   <textarea
+                    disabled={status}
                     name="messages"
                     required
                     className="contact-input"
@@ -100,9 +114,29 @@ const Contact = () => {
                   ></textarea>
                 </Col>
               </Row>
-              <button type="submit" className="p-button">
-                Submit<i className="ms-1 fas fa-location-arrow"></i>
-              </button>
+              {send && (
+                <button type="submit" className="p-button">
+                  <i className="me-1 fas fa-location-arrow"></i>Submit
+                </button>
+              )}
+              {wait && (
+                <button disabled className="wait-button">
+                  <Spinner
+                    className="me-1"
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />
+                  Please wait
+                </button>
+              )}
+              {success && (
+                <button disabled className="success-button">
+                  <i className="me-1 far fa-check-circle"></i>Sended
+                </button>
+              )}
             </form>
           </Col>
         </Row>

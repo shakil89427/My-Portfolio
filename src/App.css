@@ -1,8 +1,5 @@
 .navbg {
   background-color: #0099ff;
-  box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.75);
 }
 .circle {
   color: rgb(13, 223, 13);
@@ -14,8 +11,9 @@
 }
 .h-btn {
   margin-left: 10px;
+  margin-top: 3px;
   width: 60px;
-  height: 25px;
+  height: 20px;
   font-size: x-small;
   border-radius: 20px;
   border: none;
@@ -73,29 +71,54 @@ hr {
   background-color: #0099ff;
   color: white;
 }
+.used button {
+  border: none;
+  margin: 5px;
+  pointer-events: none;
+  border-radius: 5px;
+}
+.success-button {
+  margin: 5px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #0099ff;
+  color: white;
+}
+.wait-button {
+  margin: 5px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #676857;
+  color: white;
+}
 .p-button:hover {
   background-color: blue;
 }
-.main-col {
-  border-radius: 10px;
+.main-img {
+  width: 100%;
+  border-radius: 15px;
   box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.75);
 }
 .contact-input {
+  cursor: pointer;
   width: 100%;
-  outline: None;
+  outline: 1px solid #0099ff;
   padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.301);
+  border: none;
   border-radius: 5px;
 }
+.contact-input:focus {
+  background-color: #6dc0f767;
+}
 .info {
-  width: 70%;
   margin: 5px auto;
 }
 .info:hover {
-  background-color: rgba(74, 74, 248, 0.205);
-  border-radius: 5px;
+  color: blue;
 }
 .top {
   position: fixed;
