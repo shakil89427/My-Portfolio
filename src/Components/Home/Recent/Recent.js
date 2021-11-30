@@ -38,7 +38,7 @@ const Recent = () => {
         <Col className=" text-center p-5" md={6} lg={6}>
           <h2 className="text-info">Small Apps</h2>
           <h6 className="fw-light">
-            Fully Responsive non functional frontend focused multiple page
+            Fully Responsive semi functional frontend focused multiple page
             application.
           </h6>
           <div className="used my-2">

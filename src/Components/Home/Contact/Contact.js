@@ -78,24 +78,14 @@ const Contact = () => {
                 <Col className="mb-3" sm={12} md={6} lg={6}>
                   <input
                     disabled={status}
-                    name="first"
+                    name="name"
                     required
                     className="contact-input"
-                    placeholder="First Name"
+                    placeholder="Your Name"
                     type="text"
                   />
                 </Col>
                 <Col className="mb-3" sm={12} md={6} lg={6}>
-                  <input
-                    disabled={status}
-                    name="last"
-                    required
-                    className="contact-input"
-                    placeholder="Last Name"
-                    type="text"
-                  />
-                </Col>
-                <Col className="mb-3" sm={12} md={12} lg={12}>
                   <input
                     disabled={status}
                     name="email"
@@ -103,6 +93,16 @@ const Contact = () => {
                     className="contact-input"
                     placeholder="Your Email"
                     type="email"
+                  />
+                </Col>
+                <Col className="mb-3" sm={12} md={12} lg={12}>
+                  <input
+                    disabled={status}
+                    name="subject"
+                    required
+                    className="contact-input"
+                    placeholder="Subject"
+                    type="text"
                   />
                 </Col>
                 <Col className="mb-3" sm={12} md={12} lg={12}>
