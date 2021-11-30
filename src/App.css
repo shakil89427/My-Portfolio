@@ -120,6 +120,10 @@ hr {
 .info:hover {
   color: #0486dd;
 }
+.succes-msg {
+  background-color: rgba(0, 128, 0, 0.123);
+  border-radius: 5px;
+}
 .top {
   position: fixed;
   padding: 10px;

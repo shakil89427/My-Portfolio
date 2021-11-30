@@ -3,15 +3,16 @@ import { Col, Container, Row, Spinner } from "react-bootstrap";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [status, setStatus] = useState(false);
   const [send, setSend] = useState(true);
   const [wait, setWait] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [status, setStatus] = useState(false);
+  const [success, setSuccess] = useState("hidden");
 
   const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus(true);
     setSend(false);
     setWait(true);
-    e.preventDefault();
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_NAME,
@@ -22,10 +23,12 @@ const Contact = () => {
       .then(
         (result) => {
           if (result) {
+            setStatus(false);
             e.target.reset();
             setWait(false);
-            setSuccess(true);
-            setStatus(true);
+            setSend(true);
+            setSuccess("");
+            setTimeout(() => setSuccess("hidden"), 5000);
           }
         },
         (error) => {
@@ -72,7 +75,11 @@ const Contact = () => {
             </a>
           </Col>
           <Col className="text-center p-5" sm={12} md={6} lg={6}>
-            <h2 className="fw-light mb-3">Send Your Valuable Message</h2>
+            <h2 className="fw-light">Send Your Valuable Message</h2>
+            <p className="succes-msg p-1" style={{ visibility: success }}>
+              <i className="me-2 far fa-check-circle"></i>Success!!! Thanks for
+              your message
+            </p>
             <form onSubmit={sendEmail}>
               <Row className="text-center">
                 <Col className="mb-3" sm={12} md={6} lg={6}>
@@ -134,11 +141,11 @@ const Contact = () => {
                   Please wait
                 </button>
               )}
-              {success && (
+              {/* {success && (
                 <button disabled className="success-button">
                   <i className="me-1 far fa-check-circle"></i>Sended
                 </button>
-              )}
+              )} */}
             </form>
           </Col>
         </Row>
