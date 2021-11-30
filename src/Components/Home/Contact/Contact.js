@@ -28,7 +28,7 @@ const Contact = () => {
             setWait(false);
             setSend(true);
             setSuccess("");
-            setTimeout(() => setSuccess("hidden"), 5000);
+            setTimeout(() => setSuccess("hidden"), 3000);
           }
         },
         (error) => {
