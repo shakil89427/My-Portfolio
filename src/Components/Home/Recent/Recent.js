@@ -46,6 +46,7 @@ const Recent = () => {
             <button>Bootstrap</button>
             <button>Vanilla Css</button>
             <button>Firebase</button>
+            <button>React Router</button>
           </div>
           <a href="https://smallapps247.netlify.app/" target="blank">
             <button className="p-button">Live Site</button>
@@ -62,24 +63,35 @@ const Recent = () => {
         <Col sm={12} md={6} lg={6}>
           <img className="main-img" src={gpu} alt="" />
         </Col>
-        <Col className="text-center p-5" sm={12} md={6} lg={6}>
+        <Col className="text-center pt-2 px-5" sm={12} md={6} lg={6}>
           <h2 className="text-info">Gpu Shop</h2>
           <h6 className="fw-light">
-            Non responsive,less designed,fully functional,dynamic,backend
-            focused,multiple page, e-commerce related small application
+            Fully responsive,fully functional,dynamic,backend focused,multiple
+            page, e-commerce related small application
+          </h6>
+          <h6 className="fw-light">
+            Registered Users can see details,order product,cancel order,write
+            review,Send Messages and many more
+          </h6>
+          <h6 className="fw-light">
+            Admin panel also included for add or remove products,change orders
+            status,cancel orders,promote a registered users to Admin and many
+            more
           </h6>
           <div className="used my-2">
             <button>React</button>
             <button>Javascript</button>
-            <button>Vanilla Css</button>
+            <button>Bootstrap</button>
             <button>Firebase</button>
             <button>axios</button>
-            <button>react-router</button>
+            <button>react-router 6</button>
             <button>Express</button>
             <button>MongoDB</button>
             <button>Heroku</button>
+            <button>Email Js</button>
+            <button>React slick</button>
           </div>
-          <a href="https://gpushop-247.netlify.app/" target="blank">
+          <a href="https://gpushop.netlify.app/" target="blank">
             <button className="p-button">Live Site</button>
           </a>
           <a
