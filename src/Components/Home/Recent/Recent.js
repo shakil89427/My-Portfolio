@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import patrix from "../../../images/patrix.PNG";
-import small from "../../../images/small.PNG";
-import gpu from "../../../images/gpushop.PNG";
+import patrix from "../../../images/patrix.jpg";
+import small from "../../../images/small.jpg";
+import ogani from "../../../images/ogani.JPG";
 
 const Recent = () => {
   return (
@@ -61,13 +61,13 @@ const Recent = () => {
       </Row>
       <Row>
         <Col sm={12} md={6} lg={6}>
-          <img className="main-img" src={gpu} alt="" />
+          <img className="main-img" src={ogani} alt="" />
         </Col>
         <Col className="text-center pt-2 px-5" sm={12} md={6} lg={6}>
-          <h2 className="text-info">Gpu Shop</h2>
+          <h2 className="text-info">Ogani Shop</h2>
           <h6 className="fw-light">
-            Fully responsive,fully functional,dynamic,backend focused,multiple
-            page, e-commerce related small application
+            Fully responsive,fully functional,dynamic,multiple page, e-commerce
+            related small application
           </h6>
           <h6 className="fw-light">
             Registered Users can see details,order product,cancel order,write
@@ -81,29 +81,22 @@ const Recent = () => {
           <div className="used my-2">
             <button>React</button>
             <button>Javascript</button>
-            <button>Bootstrap</button>
-            <button>Firebase</button>
+            <button>Vanilla CSS</button>
             <button>axios</button>
             <button>react-router 6</button>
             <button>Express</button>
             <button>MongoDB</button>
             <button>Heroku</button>
-            <button>Email Js</button>
+            <button>Google oAuth</button>
             <button>React slick</button>
           </div>
-          <a href="https://gpushop.netlify.app/" target="blank">
+          <a href="https://oganishop.netlify.app/" target="blank">
             <button className="p-button">Live Site</button>
           </a>
-          <a
-            href="https://github.com/shakil89427/Gpushop-Client"
-            target="blank"
-          >
+          <a href="https://github.com/shakil89427/Ogani-Client" target="blank">
             <button className="p-button">Frontend Code Link</button>
           </a>
-          <a
-            href="https://github.com/shakil89427/Gpushop-Server"
-            target="blank"
-          >
+          <a href="https://github.com/shakil89427/Ogani-Server" target="blank">
             <button className="p-button">Backend Code Link</button>
           </a>
         </Col>

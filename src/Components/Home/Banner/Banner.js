@@ -13,7 +13,7 @@ const Banner = () => {
       </p>
       <a
         className="down"
-        href="https://drive.google.com/file/d/1rK0LtlgEpt2BsSndjo5Qvt_cpvahK8Hp/view?usp=sharing"
+        href="https://drive.google.com/file/d/1Vu5ayg4j5uunhGk8R-pp9E18HRaJH14x/view?usp=sharing"
         target="blank"
       >
         <button className="banner-btn">Get Resume</button>
